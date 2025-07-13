@@ -3,15 +3,27 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Malla Curricular Medicina USS</title>
+  <title>Malla Curricular Medicina - Laika</title>
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-  <h1>Malla Curricular Medicina - USS</h1>
-  <div style="margin-bottom:20px;">
+  <header style="text-align:center; margin-bottom: 30px;">
+    <h1>Malla Curricular Medicina - USS Valdivia</h1>
+    <p style="font-size: 18px; color: #7f8c8d;">"Cada ramo aprobado es un paso más hacia tu futuro como médica."</p>
+  </header>
+
+  <div style="text-align:center; margin-bottom:20px;">
     <strong>Haz clic sobre un ramo para cambiar su estado:</strong><br>
-    🔴 Pendiente → 🟡 Cursando → 🟢 Aprobado
+    🔴 <span style="color:#c44569;">Pendiente</span> → 🟡 <span style="color:#e67e22;">Cursando</span> → 🟢 <span style="color:#27ae60;">Aprobado</span>
   </div>
+
+  <div id="barra-progreso" style="margin-bottom: 30px; text-align:center;">
+    <label><strong>Progreso total:</strong></label>
+    <div style="background:#ddd; width:80%; height:20px; margin: 10px auto; border-radius: 10px; overflow: hidden;">
+      <div id="progreso" style="height:100%; width:0%; background:#5cdb95; text-align:right; color:white; padding-right:5px; border-radius: 10px;">0%</div>
+    </div>
+  </div>
+
   <div id="malla"></div>
 
   <script>
@@ -21,16 +33,22 @@
         const contenedor = document.getElementById("malla");
         const progresoGuardado = JSON.parse(localStorage.getItem("progreso")) || {};
 
+        let totalRamos = 0;
+        let aprobados = 0;
+
         data.forEach(semestre => {
           const bloque = document.createElement("div");
           bloque.classList.add("semestre");
-          bloque.innerHTML = `<h2>Semestre ${semestre.semestre}</h2>`;
+          bloque.innerHTML = `<h2>📘 Semestre ${semestre.semestre}</h2>`;
 
           semestre.ramos.forEach(ramo => {
+            totalRamos++;
             const item = document.createElement("p");
             item.textContent = ramo.nombre;
             const estadoActual = progresoGuardado[ramo.nombre] || ramo.estado;
             item.classList.add(estadoActual);
+
+            if (estadoActual === "aprobado") aprobados++;
 
             item.addEventListener("click", () => {
               const estados = ["pendiente", "cursando", "aprobado"];
@@ -40,6 +58,7 @@
               item.classList.add(siguienteEstado);
               progresoGuardado[ramo.nombre] = siguienteEstado;
               localStorage.setItem("progreso", JSON.stringify(progresoGuardado));
+              actualizarBarra();
             });
 
             bloque.appendChild(item);
@@ -47,6 +66,18 @@
 
           contenedor.appendChild(bloque);
         });
+
+        function actualizarBarra() {
+          let progreso = 0;
+          for (let key in progresoGuardado) {
+            if (progresoGuardado[key] === "aprobado") progreso++;
+          }
+          const porcentaje = Math.round((progreso / totalRamos) * 100);
+          document.getElementById("progreso").style.width = porcentaje + "%";
+          document.getElementById("progreso").textContent = porcentaje + "%";
+        }
+
+        actualizarBarra();
       });
   </script>
 </body>

@@ -1,14 +1,16 @@
 
-# Malla Curricular Interactiva - Medicina USS (Con cambio de estado)
+# Malla Curricular Interactiva - Medicina USS
 
-Este proyecto muestra mi malla curricular y me permite interactuar con cada ramo. Al hacer clic, puedo cambiar el estado de "pendiente" a "cursando" o "aprobado". Todos los cambios se guardan en el navegador.
+Este proyecto muestra mi malla curricular interactiva como estudiante de Medicina en la Universidad San Sebastián (sede Valdivia). Los ramos están organizados por semestre y se pueden marcar como aprobados, cursando o pendientes.
 
-## ¿Cómo funciona?
-- Haz clic en el nombre de un ramo
-- Cambiará su color y estado
-- Tu avance se guarda automáticamente (usa localStorage)
+## Funcionalidades:
+- Clic sobre cada ramo para cambiar su estado
+- Colores pastel según estado:
+  - 🔴 Pendiente
+  - 🟡 Cursando
+  - 🟢 Aprobado
+- Barra de progreso automática
+- Avance guardado localmente (localStorage)
 
-## Estados
-🔴 Pendiente  
-🟡 Cursando  
-🟢 Aprobado
+## Créditos:
+Desarrollado por Laika 🩺✨
