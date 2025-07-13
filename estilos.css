@@ -10,6 +10,6 @@ body {
   margin-bottom: 20px;
   background: white;
 }
-.aprobado { color: green; font-weight: bold; }
-.cursando { color: orange; font-weight: bold; }
-.pendiente { color: red; font-weight: bold; }
+.aprobado { color: green; font-weight: bold; cursor: pointer; }
+.cursando { color: orange; font-weight: bold; cursor: pointer; }
+.pendiente { color: red; font-weight: bold; cursor: pointer; }

@@ -8,6 +8,10 @@
 </head>
 <body>
   <h1>Malla Curricular Medicina - USS</h1>
+  <div style="margin-bottom:20px;">
+    <strong>Haz clic sobre un ramo para cambiar su estado:</strong><br>
+    🔴 Pendiente → 🟡 Cursando → 🟢 Aprobado
+  </div>
   <div id="malla"></div>
 
   <script>
@@ -15,16 +19,32 @@
       .then(res => res.json())
       .then(data => {
         const contenedor = document.getElementById("malla");
+        const progresoGuardado = JSON.parse(localStorage.getItem("progreso")) || {};
+
         data.forEach(semestre => {
           const bloque = document.createElement("div");
           bloque.classList.add("semestre");
           bloque.innerHTML = `<h2>Semestre ${semestre.semestre}</h2>`;
+
           semestre.ramos.forEach(ramo => {
             const item = document.createElement("p");
             item.textContent = ramo.nombre;
-            item.classList.add(ramo.estado);
+            const estadoActual = progresoGuardado[ramo.nombre] || ramo.estado;
+            item.classList.add(estadoActual);
+
+            item.addEventListener("click", () => {
+              const estados = ["pendiente", "cursando", "aprobado"];
+              const actualIndex = estados.indexOf(item.classList[0]);
+              const siguienteEstado = estados[(actualIndex + 1) % estados.length];
+              item.className = "";
+              item.classList.add(siguienteEstado);
+              progresoGuardado[ramo.nombre] = siguienteEstado;
+              localStorage.setItem("progreso", JSON.stringify(progresoGuardado));
+            });
+
             bloque.appendChild(item);
           });
+
           contenedor.appendChild(bloque);
         });
       });
