@@ -1,32 +1,137 @@
-
 [
   {
     "semestre": 1,
     "ramos": [
-      {
-        "nombre": "Biología Molecular y Genética",
-        "estado": "pendiente"
-      },
-      {
-        "nombre": "Química General y Orgánica",
-        "estado": "pendiente"
-      },
-      {
-        "nombre": "Bases Físico-Matemáticas de la Medicina",
-        "estado": "pendiente"
-      },
-      {
-        "nombre": "Bases y Fundamentos de la Medicina",
-        "estado": "pendiente"
-      },
-      {
-        "nombre": "Morfología Integrada y Orientada a la Práctica Médica I",
-        "estado": "pendiente"
-      },
-      {
-        "nombre": "Estrategias para el Aprendizaje",
-        "estado": "pendiente"
-      }
+      { "nombre": "Biología Molecular y Genética", "estado": "pendiente" },
+      { "nombre": "Química General y Orgánica", "estado": "pendiente" },
+      { "nombre": "Bases Físico-Matemáticas de la Medicina", "estado": "pendiente" },
+      { "nombre": "Bases y Fundamentos de la Medicina", "estado": "pendiente" },
+      { "nombre": "Morfología Integrada y Orientada a la Práctica Médica I", "estado": "pendiente" },
+      { "nombre": "Estrategias para el Aprendizaje", "estado": "pendiente" }
+    ]
+  },
+  {
+    "semestre": 2,
+    "ramos": [
+      { "nombre": "Biología Celular", "estado": "pendiente" },
+      { "nombre": "Bioquímica General", "estado": "pendiente" },
+      { "nombre": "Soporte Básico Vital, Primeros Auxilios y Principios de Enfermería", "estado": "pendiente" },
+      { "nombre": "Historia de la Medicina Universal y Chilena", "estado": "pendiente" },
+      { "nombre": "Morfología Integrada y Orientada a la Práctica Médica II", "estado": "pendiente" },
+      { "nombre": "Antropología", "estado": "pendiente" }
+    ]
+  },
+  {
+    "semestre": 3,
+    "ramos": [
+      { "nombre": "Bioestadística y Principios de Medicina Basada en la Evidencia", "estado": "pendiente" },
+      { "nombre": "Microbiología Médica", "estado": "pendiente" },
+      { "nombre": "Fisiología Médica", "estado": "pendiente" },
+      { "nombre": "Psicología Aplicada a la Medicina General y al Médico", "estado": "pendiente" },
+      { "nombre": "Morfología Integrada y Orientada a la Práctica Médica III", "estado": "pendiente" },
+      { "nombre": "Ética", "estado": "pendiente" }
+    ]
+  },
+  {
+    "semestre": 4,
+    "ramos": [
+      { "nombre": "Semiología I", "estado": "pendiente" },
+      { "nombre": "Patología Médica", "estado": "pendiente" },
+      { "nombre": "Fisiopatología Médica", "estado": "pendiente" },
+      { "nombre": "Salud Poblacional", "estado": "pendiente" },
+      { "nombre": "Integración ABP I", "estado": "pendiente" },
+      { "nombre": "Electivo de Formación Integral I", "estado": "pendiente" }
+    ]
+  },
+  {
+    "semestre": 5,
+    "ramos": [
+      { "nombre": "Semiología II", "estado": "pendiente" },
+      { "nombre": "Farmacología General", "estado": "pendiente" },
+      { "nombre": "Epidemiología", "estado": "pendiente" },
+      { "nombre": "Bioética", "estado": "pendiente" },
+      { "nombre": "Razonamiento Médico - Clínico I", "estado": "pendiente" },
+      { "nombre": "Electivo de Formación Integral II", "estado": "pendiente" }
+    ]
+  },
+  {
+    "semestre": 6,
+    "ramos": [
+      { "nombre": "Medicina Interna I", "estado": "pendiente" },
+      { "nombre": "Cirugía I", "estado": "pendiente" },
+      { "nombre": "Metodología de la Investigación", "estado": "pendiente" },
+      { "nombre": "Salud Digital", "estado": "pendiente" },
+      { "nombre": "Integración ABP II", "estado": "pendiente" },
+      { "nombre": "Electivo de Formación Integral III", "estado": "pendiente" }
+    ]
+  },
+  {
+    "semestre": 7,
+    "ramos": [
+      { "nombre": "Medicina Interna II", "estado": "pendiente" },
+      { "nombre": "Cirugía II", "estado": "pendiente" },
+      { "nombre": "Psiquiatría I", "estado": "pendiente" },
+      { "nombre": "Razonamiento Médico - Clínico II", "estado": "pendiente" },
+      { "nombre": "Salud Pueblos Originarios y Migrantes", "estado": "pendiente" },
+      { "nombre": "Electivo de Formación Integral IV", "estado": "pendiente" }
+    ]
+  },
+  {
+    "semestre": 8,
+    "ramos": [
+      { "nombre": "Pediatría I", "estado": "pendiente" },
+      { "nombre": "Ginecología y Obstetricia I", "estado": "pendiente" },
+      { "nombre": "Psiquiatría II", "estado": "pendiente" },
+      { "nombre": "Medicina Legal, Responsabilidad Médica y Obligaciones Profesionales", "estado": "pendiente" },
+      { "nombre": "Razonamiento Médico - Clínico III", "estado": "pendiente" }
+    ]
+  },
+  {
+    "semestre": 9,
+    "ramos": [
+      { "nombre": "Pediatría II", "estado": "pendiente" },
+      { "nombre": "Ginecología y Obstetricia II", "estado": "pendiente" },
+      { "nombre": "Especialidades I", "estado": "pendiente" },
+      { "nombre": "Medicina Familiar y Comunitaria", "estado": "pendiente" },
+      { "nombre": "Razonamiento Médico - Clínico IV", "estado": "pendiente" }
+    ]
+  },
+  {
+    "semestre": 10,
+    "ramos": [
+      { "nombre": "Internado de Medicina Interna", "estado": "pendiente" },
+      { "nombre": "Internado de Pediatría", "estado": "pendiente" },
+      { "nombre": "Especialidades II", "estado": "pendiente" },
+      { "nombre": "Medicina de Urgencia y Trauma", "estado": "pendiente" }
+    ]
+  },
+  {
+    "semestre": 11,
+    "ramos": [
+      { "nombre": "Internado de Salud Mental", "estado": "pendiente" },
+      { "nombre": "Internado de Medicina Familiar", "estado": "pendiente" },
+      { "nombre": "Cuidados Paliativos y del Fin de la Vida", "estado": "pendiente" }
+    ]
+  },
+  {
+    "semestre": 12,
+    "ramos": [
+      { "nombre": "Internado de Especialidades de la Medicina Interna", "estado": "pendiente" },
+      { "nombre": "Internado de Cirugía y Urología", "estado": "pendiente" }
+    ]
+  },
+  {
+    "semestre": 13,
+    "ramos": [
+      { "nombre": "Internado de Ginecología y Obstetricia", "estado": "pendiente" },
+      { "nombre": "Internado de Medicina de Urgencia y Traumatología", "estado": "pendiente" }
+    ]
+  },
+  {
+    "semestre": 14,
+    "ramos": [
+      { "nombre": "Internado Electivo I", "estado": "pendiente" },
+      { "nombre": "Internado Electivo II", "estado": "pendiente" }
     ]
   }
 ]
