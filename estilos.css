@@ -1,0 +1,15 @@
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  background-color: #f8f8f8;
+}
+.semestre {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  background: white;
+}
+.aprobado { color: green; font-weight: bold; }
+.cursando { color: orange; font-weight: bold; }
+.pendiente { color: red; font-weight: bold; }

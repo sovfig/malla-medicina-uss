@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Curricular Medicina USS</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <h1>Malla Curricular Medicina - USS</h1>
+  <div id="malla"></div>
+
+  <script>
+    fetch("malla.json")
+      .then(res => res.json())
+      .then(data => {
+        const contenedor = document.getElementById("malla");
+        data.forEach(semestre => {
+          const bloque = document.createElement("div");
+          bloque.classList.add("semestre");
+          bloque.innerHTML = `<h2>Semestre ${semestre.semestre}</h2>`;
+          semestre.ramos.forEach(ramo => {
+            const item = document.createElement("p");
+            item.textContent = ramo.nombre;
+            item.classList.add(ramo.estado);
+            bloque.appendChild(item);
+          });
+          contenedor.appendChild(bloque);
+        });
+      });
+  </script>
+</body>
+</html>

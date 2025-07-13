@@ -1,0 +1,32 @@
+
+[
+  {
+    "semestre": 1,
+    "ramos": [
+      {
+        "nombre": "Biología Molecular y Genética",
+        "estado": "pendiente"
+      },
+      {
+        "nombre": "Química General y Orgánica",
+        "estado": "pendiente"
+      },
+      {
+        "nombre": "Bases Físico-Matemáticas de la Medicina",
+        "estado": "pendiente"
+      },
+      {
+        "nombre": "Bases y Fundamentos de la Medicina",
+        "estado": "pendiente"
+      },
+      {
+        "nombre": "Morfología Integrada y Orientada a la Práctica Médica I",
+        "estado": "pendiente"
+      },
+      {
+        "nombre": "Estrategias para el Aprendizaje",
+        "estado": "pendiente"
+      }
+    ]
+  }
+]
